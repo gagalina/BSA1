@@ -95,6 +95,7 @@ section{
 .wrapper{
     width: 400px;
     margin: auto;
+    z-index: 999;
 
 }
 
@@ -102,7 +103,7 @@ section{
     width: 100px;
     height: 120px;
     background-color: #ff7777;
-    margin: 5px;
+    margin: 0 13px;
 
 }
 .left{
@@ -190,7 +191,7 @@ footer{
     position: relative;
     overflow: hidden;
 }
-.block1 .with-ribbon .ribbon{
+.block1 .with-ribbon .ribbon1{
     position: absolute;
     width: 20px;
     height: 80px;
@@ -198,4 +199,50 @@ footer{
     transform: rotate(45deg);
     top: -18%;
 }
+.ribbon {
+    width: 50%;
+    position: relative;
+    background: #ba89b6;
+    color: #fff;
+    text-align: center;
+    padding: 0.9em 1.6em;
+    top: 6em;
+}
+.ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: .8em solid #986794;
+    z-index: -1;
+}
+.ribbon:before {
+    left: -1.3em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+.ribbon:after {
+    right: -1.3em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
 
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #804f7c transparent transparent transparent;
+    bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+.block1-text-with-ribbon{
+    height: 52%;
+}
